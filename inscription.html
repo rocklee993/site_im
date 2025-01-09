@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Inscription - Association Master Informatique</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="accueil.css">
+  <style>
+    /* Style amélioré pour le formulaire */
+    .form-container {
+      max-width: 450px;
+      margin: 120px auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      font-size: 1.8rem;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #f1f1f1;
+      transition: border 0.3s ease;
+    }
+
+    .form-container input:focus {
+      border: 1px solid #0077B6;
+      outline: none;
+    }
+
+    .form-container label {
+      font-size: 0.9rem;
+      color: #555;
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .form-container input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background: #003366;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-container button:hover {
+      background: #005580;
+      transform: translateY(-2px);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #e6f7ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #003366;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-icons a:hover {
+      background: #d0ebf9;
+      transform: scale(1.1);
+    }
+
+    .divider {
+      font-size: 0.9rem;
+      color: #777;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header (from accueil) -->
+  <nav>
+    <div class="nav-content">
+      <a href="/" class="logo">Master Info</a>
+      <div class="nav-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#events">Événements</a>
+        <a href="#activities">Blog et Actus</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="inscription.html" class="adherer-button active">Adhérer</a>
+    </div>
+  </nav>
+
+  <!-- Formulaire d'inscription -->
+  <div class="form-container">
+    <h2>Inscription</h2>
+    <form action="submit_inscription.php" method="post">
+      <input type="text" name="first_name" placeholder="Prénom" required>
+      <input type="email" name="email" placeholder="Adresse email" required>
+      <input type="password" name="password" placeholder="Mot de passe" required>
+      <div style="text-align: left; margin-top: 10px;">
+        <input type="checkbox" name="terms" required>
+        <label for="terms">J'accepte les <a href="#">Termes et Conditions</a> et la <a href="#">Politique de confidentialité</a>.</label>
+      </div>
+      <button type="submit">Créer un compte</button>
+    </form>
+
+    <div class="divider">OU</div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-apple"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <!-- Footer (from accueil) -->
+  <footer style="background-color: #003366; color: white; padding: 20px 0;">
+    <div class="footer-content" style="text-align: center;">
+      <p>© 2024 Association Master Informatique - Tous droits réservés</p>
+      <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
+
+      <div class="social-media-links">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
