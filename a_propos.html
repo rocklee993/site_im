@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="accueil.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -15,8 +18,6 @@
       <div class="nav-links">
         <a href="accueil.html">Accueil</a>
         <a href="a_propos.html">À propos</a>
-        <a href="index.html">Accueil</a>
-        <a href="#about">À propos</a>
         <a href="events.html">Événements</a>
         <a href="#activities">Blog et Actus</a>
         <a href="contact.html">Contact</a>
@@ -27,19 +28,25 @@
 
   <section class="hero-main">
     <div class="hero-content">
-      <h1>Association des Étudiants en Master Informatique</h1>
-      <p>Connecter, Innover, Réussir Ensemble</p>
+      <h1>À Propos de l'Association</h1>
+      <p></p>
     </div>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./a_propos_image/image1.jpg" alt="Image 1"></div>
+        <div class="swiper-slide"><img src="./a_propos_image/image2.jpg" alt="Image 2"></div>
+        <div class="swiper-slide"><img src="./a_propos_image/image3.jpg" alt="Image 3"></div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
 
     <div class="main-content">
       <!-- Left side: Brief presentation -->
       <div class="left-content">
-        <h2>Bienvenue sur notre site</h2>
-        <p>
-          L'Association des Étudiants en Master Informatique a pour objectif de rassembler les étudiants du programme de
-          Master Informatique. Nous organisons des événements, des activités et des projets pour favoriser l'innovation
-          et la réussite collective dans le domaine des technologies de l'information.
-        </p>
+        
+        </div>
+        
       </div>
 
       <!-- Right side: Image in a blue box -->
@@ -91,8 +98,18 @@
         form.reset();
       });
     });
+
+    const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
   </script>
 
 </body>
 
 </html>
+
+rien ne s'affiche sur ma page pourtant mes images sont bien présentes 

@@ -4,7 +4,17 @@
     --accent: #03045E;
     --light: #ecf0f1;
   }
+  .swiper {
+    width: 100%;
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+  }
   
+  .swiper-slide img {
+    width: 100%;
+    height: auto; /* Ajuste les images à la taille de la diapositive */
+  }
+  
+
   body {
     margin: 0;
     padding: 0;
