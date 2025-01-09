@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-  <title>Inscription - Association Master Informatique</title>
+  <title>Connexion - Association Master Informatique</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="accueil.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="accueil.css">
   <style>
-    /* Style amélioré pour le formulaire */
+    /* Style pour la page de connexion */
     .form-container {
       max-width: 450px;
       margin: 120px auto;
@@ -27,7 +25,6 @@
       margin-bottom: 20px;
     }
 
-    .form-container input[type="text"],
     .form-container input[type="email"],
     .form-container input[type="password"] {
       width: 100%;
@@ -51,11 +48,6 @@
       display: block;
       margin-top: 10px;
       text-align: left;
-    }
-
-    .form-container input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.2);
     }
 
     .form-container button {
@@ -127,6 +119,16 @@
     .divider::after {
       right: 0;
     }
+
+    .form-container a {
+      color: #0077B6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .form-container a:hover {
+      color: #005580;
+    }
   </style>
 </head>
 
@@ -143,41 +145,30 @@
         <a href="#activities">Blog et Actus</a>
         <a href="contact.html">Contact</a>
       </div>
-      <a href="inscription.html" class="adherer-button active">Adhérer</a>
+      <a href="inscription.html" class="adherer-button">Adhérer</a>
     </div>
   </nav>
 
-  <!-- Formulaire d'inscription -->
+  <!-- Formulaire de connexion -->
   <div class="form-container">
-    <h2>Inscription</h2>
-    <form action="submit_inscription.php" method="post">
-      <input type="text" name="first_name" placeholder="Prénom" required>
+    <h2>Connexion</h2>
+    <form action="submit_login.php" method="post">
       <input type="email" name="email" placeholder="Adresse email" required>
       <input type="password" name="password" placeholder="Mot de passe" required>
-      
-      <!-- Alignement checkbox et texte -->
-      <div style="display: flex; align-items: center; margin-top: 10px; text-align: left;">
-        <input type="checkbox" name="terms" id="terms" required style="margin-right: 10px;">
-        <label for="terms">J'accepte les <a href="#">Termes et Conditions</a> et la <a href="#">Politique de confidentialité</a>.</label>
-      </div>
-      
-      <br>
-      <button type="submit">Créer un compte</button>
+      <br><br>
+      <button type="submit">Se connecter</button>
     </form>
-  
+
     <div class="divider">OU</div>
-  
-    <!-- Icônes sociales -->
+
     <div class="social-icons">
       <a href="#"><i class="fab fa-google"></i></a>
       <a href="#"><i class="fab fa-apple"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
-  
-    <!-- Lien déjà membre -->
-    <p style="margin-top: 20px; font-size: 0.9rem; color: #555;">
-      Déjà membre ? <a href="login.html" style="color: #0077B6; text-decoration: none; font-weight: bold;">Connectez-vous</a>
-    </p>
+
+    <p>Pas encore inscrit ? <a href="inscription.html">Créez un compte</a></p>
+    <p><a href="#">Mot de passe oublié ?</a></p>
   </div>
 
   <!-- Footer (from accueil) -->
