@@ -1,0 +1,78 @@
+:root {
+    --primary: #0077B6;
+    --secondary: #90E0EF;
+    --accent: #03045E;
+    --light: #ecf0f1;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--light);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  nav {
+    background: linear-gradient(135deg, #0077B6, #90E0EF);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #B8E6F4;
+    transform: scale(1.1);
+}
+
+
+  
+  .nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 1.5rem;
+  }
+  
+  
+  .adherer-button {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .adherer-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+  }

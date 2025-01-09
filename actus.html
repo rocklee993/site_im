@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Blog et Actus - Association Master Informatique</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="actus.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <nav>
+    <div class="nav-content">
+      <a href="/" class="logo">Master Info</a>
+      <div class="nav-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="actus.html" class="active">Blog et Actus</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="inscription.html" class="adherer-button">Adhérer</a>
+    </div>
+  </nav>
+
+  <!-- Contenu Principal -->
+  <main>
+    <!-- Section héro -->
+    <section class="hero-section">
+      <h1>Blog et Actualités</h1>
+      <p>Découvrez nos dernières nouvelles, événements et tendances dans le domaine de l'informatique.</p>
+      <a href="#blog" class="cta-button">Explorer les articles</a>
+    </section>
+
+    <!-- Articles -->
+    <section id="featured-article" class="featured-article-container" style="display: none;">
+      <article class="blog-card-featured">
+        <img id="featured-image" src="" alt="">
+        <div class="blog-content">
+          <span id="featured-date" class="date"></span>
+          <h2 id="featured-title"></h2>
+          <p id="featured-description"></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="blog" class="blog-container">
+      <article class="blog-card" data-title="La révolution de l'IA" data-date="10 janvier 2025" 
+         data-description="Plongez dans l'impact de l'intelligence artificielle sur le quotidien et les entreprises." 
+         data-full-description="L'intelligence artificielle (IA) révolutionne notre quotidien. Des assistants virtuels comme Alexa à l'automatisation des tâches complexes, l'IA transforme les entreprises, la santé, et bien plus encore. Découvrez comment ces technologies redéfinissent le futur et créent de nouvelles opportunités dans le monde entier." 
+         data-image="ia.jpeg">
+        <img src="ia.jpeg" alt="Révolution IA">
+        <div class="blog-content">
+          <span class="date">10 janvier 2025</span>
+          <h2>La révolution de l'IA</h2>
+          <p>Plongez dans l'impact de l'intelligence artificielle sur le quotidien et les entreprises.</p>
+          <a href="#" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+
+      <article class="blog-card" data-title="Événement : Hackathon 2024" data-date="5 janvier 2025" 
+          data-description="Rejoignez notre Hackathon et collaborez avec des experts en technologie." 
+          data-full-description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+          data-image="actus.jpeg">
+          <img src="actus.jpeg" alt="Événement : Hackathon 2024">
+          <div class="blog-content">
+          <span class="date">5 janvier 2025</span>
+          <h2>Événement : Hackathon 2024</h2>
+          <p>Rejoignez notre Hackathon et collaborez avec des experts en technologie.</p>
+          <a href="#" class="read-more">Lire la suite</a>
+          </div>
+      </article>
+
+
+      <article class="blog-card" data-title="Les tendances en développement web" data-date="5 janvier 2025" 
+          data-description="Explorez les technologies incontournables pour les développeurs en 2024." 
+          data-full-description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+          data-image="actus.jpeg">
+          <img src="math.jpeg" alt="développement web">
+          <div class="blog-content">
+          <span class="date">30 novembre 2024</span>
+          <h2>Les tendances en développement web</h2>
+          <p>Explorez les technologies incontournables pour les développeurs en 2024.</p>
+          <a href="#" class="read-more">Lire la suite</a>
+          </div>
+      </article>
+    </section>
+  </main>
+
+  <footer style="background-color: #003366; color: white; padding: 20px 0;">
+    <div class="footer-content" style="text-align: center;">
+      <p>© 2024 Association Master Informatique - Tous droits réservés</p>
+      <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
+
+      <div class="social-media-links">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const readMoreLinks = document.querySelectorAll('.read-more');
+      const featuredSection = document.getElementById('featured-article');
+      const featuredImage = document.getElementById('featured-image');
+      const featuredDate = document.getElementById('featured-date');
+      const featuredTitle = document.getElementById('featured-title');
+      const featuredDescription = document.getElementById('featured-description');
+
+      readMoreLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const article = link.closest('.blog-card');
+          const title = article.dataset.title;
+          const date = article.dataset.date;
+          const fullDescription = article.dataset.fullDescription; // Récupérer le texte détaillé
+          const image = article.dataset.image;
+
+          // Mettre à jour la section mise en avant
+          featuredImage.src = image;
+          featuredDate.textContent = date;
+          featuredTitle.textContent = title;
+          featuredDescription.textContent = fullDescription; // Afficher le texte détaillé
+
+          // Afficher la section mise en avant
+          featuredSection.style.display = 'block';
+
+          // Faire défiler jusqu'à la section mise en avant
+          featuredSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+
+  </script>
+  
+</body>
+
+</html>

@@ -55,7 +55,7 @@ nav {
   .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
   }
   
@@ -160,7 +160,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: #003366;
+    background-color: var(--primary);
     color: white;
     padding: 20px;
     text-align: center;

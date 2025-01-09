@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title>Association Master Informatique et Mathematique de l'UHA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="accueil.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <a href="/" class="logo">Master Info</a>
+      <div class="nav-links">
+        <a href="accueil.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="actus.html">Blog et Actus</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="inscription.html" class="adherer-button">Adhérer</a>
+    </div>
+  </nav>
+
+  <section class="hero-main">
+    <div class="hero-content">
+      <h2>Association des Étudiants en Master Informatique et Mathematique de l'UHA</h1>
+      <p>Connecter, Innover, Réussir Ensemble</p>
+    </div>
+
+    <div class="main-content">
+      <!-- Left side: Brief presentation -->
+      <div class="left-content">
+        <h2>Bienvenue sur notre site</h2>
+        <p>
+          L'Association des Étudiants en Master Informatique a pour objectif de rassembler les étudiants du programme de
+          Master Informatique. Nous organisons des événements, des activités et des projets pour favoriser l'innovation
+          et la réussite collective dans le domaine des technologies de l'information.
+        </p>
+      </div>
+
+      <!-- Right side: Image in a blue box -->
+      <div class="right-content">
+        <img src="fst.jpg" alt="Association Image">
+      </div>
+    </div>
+  </section>
+
+  <footer style="background-color: #003366; color: white; padding: 20px 0;">
+    <div class="footer-content" style="text-align: center;">
+      <p>© 2024 Association Master Informatique et Mathematique - Tous droits réservés</p>
+      <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
+      <p>Adresse : 18 rue des Frères Lumière
+                    68 093 MULHOUSE Cedex</p>
+      <div class="social-media-links">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Form submission handling
+      const form = document.querySelector('.contact-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+        form.reset();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

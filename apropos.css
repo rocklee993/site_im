@@ -1,0 +1,216 @@
+
+:root {
+    --primary: #0077B6;
+    --secondary: #90E0EF;
+    --accent: #03045E;
+    --light: #ecf0f1;
+    --dark: #003366;
+}
+
+/* Corps général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light);
+}
+
+/* Section Hero */
+.hero-main {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Section About */
+.about-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    color: var(--dark);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-values p {
+    color:white;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+/* Section Values */
+.about-values {
+    padding: 40px 20px;
+    background-color: var(--light);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.values-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    flex: 1;
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.value-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color:white;
+}
+
+/* Section Team */
+.team-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h2 {
+    color: var(--dark);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-section p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1 1 calc(25% - 20px);
+    background-color: var(--light);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Section Join Us */
+.join-us-section {
+    padding: 40px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.join-us-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.join-us-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.join-us-section .adherer-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-us-section .adherer-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #90c8e0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .values-grid,
+    .team-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+    }
+}
