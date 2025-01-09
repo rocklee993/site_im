@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="accueil.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <style>
-    /* Style pour la page de connexion */
+  /* Style amélioré pour le formulaire */
     .form-container {
       max-width: 450px;
       margin: 120px auto;
@@ -25,6 +27,7 @@
       margin-bottom: 20px;
     }
 
+    .form-container input[type="text"],
     .form-container input[type="email"],
     .form-container input[type="password"] {
       width: 100%;
@@ -48,6 +51,11 @@
       display: block;
       margin-top: 10px;
       text-align: left;
+    }
+
+    .form-container input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
     }
 
     .form-container button {
@@ -119,22 +127,11 @@
     .divider::after {
       right: 0;
     }
-
-    .form-container a {
-      color: #0077B6;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .form-container a:hover {
-      color: #005580;
-    }
   </style>
 </head>
 
-<body>
 
-  <!-- Header (from accueil) -->
+<body>
   <nav>
     <div class="nav-content">
       <a href="/accueil.html" class="logo">Master Info</a>
@@ -149,10 +146,9 @@
     </div>
   </nav>
 
-  <!-- Formulaire de connexion -->
   <div class="form-container">
     <h2>Connexion</h2>
-    <form action="submit_login.php" method="post">
+    <form id="login-form">
       <input type="email" name="email" placeholder="Adresse email" required>
       <input type="password" name="password" placeholder="Mot de passe" required>
       <br><br>
@@ -162,40 +158,23 @@
     <div class="divider">OU</div>
 
     <div class="social-icons">
-      <a href="#"><i class="fab fa-google"></i></a>
-      <a href="#"><i class="fab fa-apple"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a id="google-login" href="#"><i class="fab fa-google"></i></a>
+      <a id="discord-login" href="#"><i class="fab fa-discord"></i></a>
+      <a id="facebook-login" href="#"><i class="fab fa-facebook"></i></a>
     </div>
 
     <p>Pas encore inscrit ? <a href="inscription.html">Créez un compte</a></p>
     <p><a href="#">Mot de passe oublié ?</a></p>
   </div>
 
-  <!-- Footer (from accueil) -->
   <footer style="background-color: #003366; color: white; padding: 20px 0;">
     <div class="footer-content" style="text-align: center;">
       <p>© 2024 Association Master Informatique - Tous droits réservés</p>
       <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
-
-      <div class="social-media-links">
-        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
-          <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
-          <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-      </div>
     </div>
   </footer>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script_login.js"></script>
 </body>
 
 </html>
