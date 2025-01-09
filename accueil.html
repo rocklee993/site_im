@@ -1,15 +1,14 @@
 <html>
 
 <head>
-  <base href="https://apix.dev/">
   <title>Association Master Informatique</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accueil.css">
 </head>
 
 <body>
-  
+
   <nav>
     <div class="nav-content">
       <a href="/" class="logo">Master Info</a>
@@ -20,94 +19,54 @@
         <a href="#activities">Blog et Actus</a>
         <a href="#contact">Contact</a>
       </div>
+      <a href="#adherer" class="adherer-button">Adhérer</a>
     </div>
   </nav>
 
-  <section class="hero">
-    <div>
+  <section class="hero-main">
+    <div class="hero-content">
       <h1>Association des Étudiants en Master Informatique</h1>
       <p>Connecter, Innover, Réussir Ensemble</p>
     </div>
-  </section>
 
-  <section id="about" class="section">
-    <h2>À propos de nous</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Notre Mission</h3>
-        <p>Accompagner les étudiants tout au long de leur parcours en master informatique en créant une communauté
-          dynamique et solidaire.</p>
-      </div>
-      <div class="card">
-        <h3>Nos Valeurs</h3>
-        <p>Entraide, innovation, partage des connaissances et développement professionnel sont au cœur de nos actions.
+    <div class="main-content">
+      <!-- Left side: Brief presentation -->
+      <div class="left-content">
+        <h2>Bienvenue sur notre site</h2>
+        <p>
+          L'Association des Étudiants en Master Informatique a pour objectif de rassembler les étudiants du programme de
+          Master Informatique. Nous organisons des événements, des activités et des projets pour favoriser l'innovation
+          et la réussite collective dans le domaine des technologies de l'information.
         </p>
       </div>
-      <div class="card">
-        <h3>Notre Vision</h3>
-        <p>Devenir un acteur majeur dans la réussite et l'épanouissement des étudiants en informatique.</p>
+
+      <!-- Right side: Image in a blue box -->
+      <div class="right-content">
+        <img src="fst.jpg" alt="Association Image">
       </div>
     </div>
   </section>
 
-  <section id="activities" class="section">
-    <h2>Nos Activités</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Tutorat</h3>
-        <p>Sessions d'entraide entre étudiants pour maîtriser les concepts complexes.</p>
-      </div>
-      <div class="card">
-        <h3>Hackathons</h3>
-        <p>Organisation de compétitions de programmation pour stimuler la créativité.</p>
-      </div>
-      <div class="card">
-        <h3>Conférences</h3>
-        <p>Interventions de professionnels et d'experts du domaine.</p>
+  <footer style="background-color: #003366; color: white; padding: 20px 0;">
+    <div class="footer-content" style="text-align: center;">
+      <p>© 2024 Association Master Informatique - Tous droits réservés</p>
+      <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
+
+      <div class="social-media-links">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
-  </section>
-
-  <section id="events" class="section">
-    <h2>Événements à venir</h2>
-    <div class="events">
-      <div class="event-item">
-        <h3>Workshop Intelligence Artificielle</h3>
-        <p>Date: 15 Mars 2024</p>
-        <p>Découverte des dernières avancées en IA avec des experts du domaine.</p>
-      </div>
-      <div class="event-item">
-        <h3>Soirée Networking</h3>
-        <p>Date: 5 Avril 2024</p>
-        <p>Rencontre avec des professionnels du secteur informatique.</p>
-      </div>
-      <div class="event-item">
-        <h3>Hackathon Développement Durable</h3>
-        <p>Date: 20-21 Mai 2024</p>
-        <p>48h pour développer des solutions innovantes pour l'environnement.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contactez-nous</h2>
-    <form class="contact-form">
-      <div class="form-group">
-        <input type="text" placeholder="Nom" required>
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Email" required>
-      </div>
-      <div class="form-group">
-        <textarea placeholder="Message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2024 Association Master Informatique - Tous droits réservés</p>
-    <p>Contact: contact@masterinfo.fr</p>
   </footer>
 
   <script>
