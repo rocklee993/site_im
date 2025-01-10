@@ -25,10 +25,10 @@ async function loadProfile() {
     // Afficher l'email de l'utilisateur
     document.getElementById('email').textContent = user.email;
 
-    // Charger l'image de profil depuis la table profiles
+    // Charger le profil depuis la table profiles (inclure created_at)
     const { data: profile, error: profileError } = await supabase
       .from('profiles')
-      .select('avatar_url')
+      .select('avatar_url, created_at')
       .eq('id', user.id)
       .single();
 
@@ -39,28 +39,41 @@ async function loadProfile() {
       return;
     }
 
-    if (!profile || !profile.avatar_url) {
+    // Afficher la date d'inscription
+    if (profile && profile.created_at) {
+      const joinDate = new Date(profile.created_at);
+      const formattedDate = joinDate.toLocaleDateString('fr-FR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+      document.getElementById('join-date').textContent = formattedDate;
+    } else {
+      console.warn('Date de création non disponible.');
+      document.getElementById('join-date').textContent = 'Date inconnue';
+    }
+
+    // Afficher l'image de profil
+    if (profile && profile.avatar_url) {
+      console.log('Avatar URL récupérée :', profile.avatar_url);
+
+      // Générer l'URL publique pour l'avatar
+      const { data: publicUrlData, error: publicUrlError } = supabase.storage
+        .from('avatars')
+        .getPublicUrl(profile.avatar_url);
+
+      if (publicUrlError) {
+        console.error('Erreur lors de la génération de l\'URL publique :', publicUrlError);
+        alert('Erreur lors de la génération de l\'URL publique.');
+        return;
+      }
+
+      console.log('URL publique générée avec succès :', publicUrlData.publicUrl);
+      document.getElementById('avatar').src = publicUrlData.publicUrl;
+    } else {
       console.warn('Avatar non défini. Utilisation de l\'avatar par défaut.');
       document.getElementById('avatar').src = 'default-avatar.png';
-      return;
     }
-
-    console.log('Avatar URL récupérée :', profile.avatar_url);
-
-    // Générer l'URL publique pour l'avatar
-    const { data: publicUrlData, error: publicUrlError } = supabase.storage
-      .from('avatars')
-      .getPublicUrl(profile.avatar_url);
-
-    if (publicUrlError) {
-      console.error('Erreur lors de la génération de l\'URL publique :', publicUrlError);
-      alert('Erreur lors de la génération de l\'URL publique.');
-      return;
-    }
-
-    console.log('URL publique générée avec succès :', publicUrlData.publicUrl);
-    document.getElementById('avatar').src = publicUrlData.publicUrl;
-
   } catch (e) {
     console.error('Erreur inattendue lors du chargement du profil :', e);
     alert('Une erreur inattendue est survenue. Consultez la console pour plus de détails.');
@@ -119,7 +132,6 @@ async function updateAvatar() {
 
     // Recharger le profil pour afficher les changements
     loadProfile();
-
   } catch (e) {
     console.error('Erreur inattendue lors de la mise à jour de l\'avatar :', e);
     alert('Une erreur inattendue est survenue. Consultez la console pour plus de détails.');

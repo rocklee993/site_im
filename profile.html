@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>Profil - Association Master Informatique</title>
+  <title>Mon Profil - Association Master Informatique</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="navbar.css">
@@ -31,15 +31,17 @@
 
   <!-- Profile Section -->
   <section class="profile-container">
-    <h2>Mon Profil</h2>
-    <div class="profile-info">
-      <div class="profile-image">
+    <div class="profile-card">
+      <div class="profile-image-container">
         <img id="avatar" src="default-avatar.png" alt="Avatar" />
         <input type="file" id="avatar-upload" accept="image/*" />
-      </div>
-      <div class="profile-details">
-        <p>Email : <span id="email"></span></p>
         <button id="save-avatar">Mettre à jour l'image</button>
+      </div>
+      <div class="profile-info">
+        <h2 id="username">Votre Nom</h2>
+        <p>Email : <span id="email">votre-email@example.com</span></p>
+        <p>Membre depuis : <span id="join-date">Date de création</span></p>
+        <button class="edit-profile-btn">Modifier le profil</button>
       </div>
     </div>
   </section>
