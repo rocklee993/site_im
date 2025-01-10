@@ -1,28 +1,39 @@
-// signup.js
 import { supabase } from './supabase.js';
 
 document.getElementById('signup-form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const firstName = document.getElementById('first_name').value;
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
   try {
-    const { user, error } = await supabase.auth.signUp(
-      { email, password },
-      { data: { first_name: firstName } }
-    );
+    // Inscription de l'utilisateur
+    const { data: user, error } = await supabase.auth.signUp({ email, password });
 
     if (error) {
-      alert(`Erreur: ${error.message}`);
+      console.error('Erreur lors de l\'inscription :', error);
+      alert(`Erreur : ${error.message}`);
       return;
     }
 
-    alert('Inscription réussie ! Veuillez vérifier votre email pour confirmer votre compte.');
+    console.log('Utilisateur inscrit avec succès :', user);
+
+    // Ajouter une ligne dans la table profiles avec les colonnes disponibles
+    const { error: profileError } = await supabase
+      .from('profiles')
+      .insert([{ id: user.user.id }]);
+
+    if (profileError) {
+      console.error('Erreur lors de la création du profil :', profileError);
+      alert('Erreur lors de la création du profil utilisateur.');
+      return;
+    }
+
+    console.log('Profil utilisateur créé avec succès.');
+    alert('Inscription réussie ! Veuillez vérifier votre email pour confirmer votre compte.');
     window.location.href = 'login.html';
-  } catch (error) {
-    console.error('Erreur:', error);
-    alert('Une erreur est survenue. Veuillez réessayer.');
+  } catch (err) {
+    console.error('Erreur inattendue :', err);
+    alert('Une erreur inattendue est survenue. Consultez la console pour plus de détails.');
   }
 });

@@ -1,0 +1,41 @@
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+#avatar-upload {
+  margin-top: 10px;
+}
+
+.profile-details {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0077B6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005580;
+}

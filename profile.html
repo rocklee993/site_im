@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Profil - Association Master Informatique</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-content">
+      <a href="/dashboard.html" class="logo">
+        <img src="Logo.png" alt="Logo Master Info" style="height: 80px; vertical-align: middle;">
+        Association IM/IMDS
+      </a>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="apropos.html">À propos</a>
+        <a href="events.html">Événements</a>
+        <a href="actus.html">Blog et Actus</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="logout.html" class="adherer-button">Déconnexion</a>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="profile-container">
+    <h2>Mon Profil</h2>
+    <div class="profile-info">
+      <div class="profile-image">
+        <img id="avatar" src="default-avatar.png" alt="Avatar" />
+        <input type="file" id="avatar-upload" accept="image/*" />
+      </div>
+      <div class="profile-details">
+        <p>Email : <span id="email"></span></p>
+        <button id="save-avatar">Mettre à jour l'image</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #003366; color: white; padding: 20px 0;">
+    <div class="footer-content" style="text-align: center;">
+      <p>© 2024 Association Master Informatique - Tous droits réservés</p>
+      <p>Contact: <a href="mailto:contact@masterinfo.fr" style="color: #fff;">contact@masterinfo.fr</a></p>
+      <p>Adresse : 18 rue des Frères Lumière, 68 093 MULHOUSE Cedex</p>
+      <div class="social-media-links">
+        <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; margin: 0 10px; text-decoration: none;">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="supabase.js" type="module"></script>
+  <script src="profile.js" type="module"></script>
+
+</body>
+
+</html>
