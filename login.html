@@ -152,11 +152,12 @@
   <div class="form-container">
     <h2>Connexion</h2>
     <form id="login-form">
-      <input type="email" name="email" placeholder="Adresse email" required>
-      <input type="password" name="password" placeholder="Mot de passe" required>
-      <br><br>
+      <input type="email" id="email" placeholder="Adresse email" required>
+      <input type="password" id="password" placeholder="Mot de passe" required>
       <button type="submit">Se connecter</button>
     </form>
+    <p>Pas encore membre ? <a href="inscription.html">Inscrivez-vous</a></p>
+
 
     <div class="divider">OU</div>
 
@@ -166,7 +167,6 @@
       <a id="facebook-login" href="#"><i class="fab fa-facebook"></i></a>
     </div>
 
-    <p>Pas encore inscrit ? <a href="inscription.html">Créez un compte</a></p>
     <p><a href="#">Mot de passe oublié ?</a></p>
   </div>
 
@@ -177,7 +177,8 @@
     </div>
   </footer>
 
-  <script src="script_login.js"></script>
+  <script type="module" src="supabase.js"></script>
+  <script type="module" src="login.js"></script>
 </body>
 
 </html>

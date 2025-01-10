@@ -155,11 +155,14 @@
   <!-- Formulaire d'inscription -->
   <div class="form-container">
     <h2>Inscription</h2>
-    <form action="submit_inscription.php" method="post">
-      <input type="text" name="first_name" placeholder="Prénom" required>
-      <input type="email" name="email" placeholder="Adresse email" required>
-      <input type="password" name="password" placeholder="Mot de passe" required>
-      
+    <form id="signup-form" method="post">
+      <input type="text" id="first_name" placeholder="Prénom" required>
+      <input type="email" id="email" placeholder="Adresse email" required>
+      <input type="password" id="password" placeholder="Mot de passe" required>
+      <button type="submit">Créer un compte</button>
+    </form>
+    <p>Déjà membre ? <a href="login.html">Connectez-vous</a></p>
+
       <!-- Alignement checkbox et texte -->
       <div style="display: flex; align-items: center; margin-top: 10px; text-align: left;">
         <input type="checkbox" name="terms" id="terms" required style="margin-right: 10px;">
@@ -179,10 +182,6 @@
       <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
   
-    <!-- Lien déjà membre -->
-    <p style="margin-top: 20px; font-size: 0.9rem; color: #555;">
-      Déjà membre ? <a href="login.html" style="color: #0077B6; text-decoration: none; font-weight: bold;">Connectez-vous</a>
-    </p>
   </div>
 
   <!-- Footer (from accueil) -->
@@ -208,8 +207,9 @@
     </div>
   </footer>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script type="module" src="supabase.js"></script>
+  <script type="module" src="signup.js"></script>
+
 </body>
 
 </html>
